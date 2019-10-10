@@ -1,53 +1,68 @@
 *,
-*::after,
-*::before{
+*:before,
+*:after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
   font-family: sans-serif;
 }
 html,
 body {
   height: 100%;
 }
-body {
-  background-color: #ffffff;
-}
-
-.main-display {
+.nav-header {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
-/* HEADER ITEMS */
-.header-content {
+.nav-header li {
   display: flex;
-  padding: 1.7rem 0.7rem 1.7rem 0.7rem;
-  align-items: center;
-  width: 100%;
-  /* background */
-  background-color: #ffffff;
-}
-.mobile-logo {
- width: 15rem;
- height: 2rem;
-}
-.smaller-menu-icon {
-  width: 3rem;
-  height: 2rem;
-  margin-left: auto;
-}
-/* HEADING ITEMS */
-.main-heading {
-  display: none;
-}
-.heading-bg {
-  display: flex;
-  height: 18rem;
   align-items: center;
   justify-content: center;
-  /* background */
+  list-style: none;
+  width: 10%;
+}
+.header-content {
+  width: 100%;
+  height: 12%;
+}
+.larger-logo {
+  width: 100%;
+}
+.main-heading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.main-heading :first-child {
+  font-size: 1rem;
+  font-weight: 200;
+}
+.main-heading :last-child {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+.heading-bg-lg {
+  height: 75vh;
   background-image: url(https://www.tonogroup.com/wp-content/themes/tonoarchitects/images/home-new.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.nav-header .word-anchor {
+  display: none;
+}
+.heading-bg {
+  margin-top: 14rem;
+}
+.heading-bg-lg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .right-triangle {
   width: 0;
@@ -55,6 +70,13 @@ body {
   border-top: 1rem solid transparent;
   border-left: 1rem solid #ffffff;
   border-bottom: 1rem solid transparent;
+}
+.play-align,
+.info-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 .triangle-right {
   display: flex;
@@ -70,95 +92,58 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
-.larger-logo {
-  display: none;
-}
-.larger-menu-icon {
-  display: none;
-}
-/* INFO CONTENT */
-.info-content {
-  background-color: #f5f4f1;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-.info-content h2 {
-  text-transform: uppercase;
-  font-size: 22px;
-  font-weight: 300;
-}
-.info-content h2,
-.info-content p {
-  font-family: sans-serif;
-  color: #7b7b7c;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-.info-p {
-  font-size: 15px;
-  font-weight: 200;
-}
-.info-p a {
-  color: #d07b50;
-  text-decoration: none;
+.info-container {
+  display: flex;
+  flex-direction: column;
+  color: #717172;
+  padding: 1rem;
 }
 .italic {
   font-style: italic;
 }
+.info-p a {
+  color: #de5e1f;
+  text-decoration: none;
+}
+.info-p {
+  margin-bottom: 1.4rem;
+}
+.info-content h2 {
+  margin-bottom: 1.2rem;
+}
 .info-bg {
-  display: flex;
-  height: 18rem;
-  align-items: center;
-  justify-content: center;
-  /* background */
   background-image: url(https://www.tonogroup.com/wp-content/uploads/2014/08/video3.jpg);
   background-position: center;
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 15rem;
 }
-/* BUSINESS CONTENT */
 .business-content {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .business-heading {
-  background-color: #ffffff;
-  color: #717172;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 1.5rem;
-  width: 100%;
   text-align: center;
 }
 .business-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-}
-h2.business-heading::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: calc(50% - 40px);
-  width: 0;
-  height: 0;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
-  border-top: 45px solid #ffffff;
 }
 .business-container a {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-decoration: none;
-  color: #ffffff;
+  justify-content: center;
+  height: 10rem;
+  width: 90%;
+  margin-top: 0.9rem;
+  margin-bottom: 0.9rem;
 }
 .business-image {
-  width: 10rem;
-  height: 3.6rem;
+  width: 50%;
+  padding-left: 1rem;
 }
 .relo {
   background-image: url(https://www.tonogroup.com/wp-content/themes/tonoarchitects/images/nav-img-relo.jpg);
@@ -180,170 +165,54 @@ h2.business-heading::after {
   background-image: url(https://www.tonogroup.com/wp-content/themes/tonoarchitects/images/nav-img-deco.jpg);
   border-bottom-color: #35656d;
 }
-.relo,
-.retro,
-.tono,
-.proto,
-.deco {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 30rem;
-  border-bottom-width: 0.7rem;
-  border-bottom-style: solid;
+.first {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
-/* FOOTER CONTENT */
+.yellow {
+  background-color: #bc78037a;
+}
+.green {
+  background-color: #3862507a;
+}
+.brown {
+  background-color: #9f45167a;
+}
+.grey {
+  background-color: #504a457a;
+}
+.cyan {
+  background-color: #35656d7a;
+}
+.second {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 .footer-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 1.6rem;
+  margin: 1.5rem;
 }
-.footer-copyright {
-  color: #bfbab1;
-  font-size: 0.8rem;
-  font-weight: 300;
-  text-align: center;
+.footer-nav {
+  order: -1;
+  width: 80%;
 }
 .footer-container {
   display: flex;
   justify-content: space-around;
-  padding: 0;
 }
 .footer-container li {
   list-style: none;
 }
-.footer-nav {
-  width: 60%;
+.footer-copyright {
+  text-align: center;
+  margin-top: 1rem;
 }
 .logo {
-  height: 1.5rem;
-  width: 1.5rem;
-}
-
-/*** MEDIUM SIZED ***/
-@media only screen and (min-width: 700px) {
-  .larger-logo {
-    display: block;
-    width: 9rem;
-    height: 9rem;
-  }
-  .larger-menu-icon {
-    display: block;
-    width: 3rem;
-    height: 2rem;
-    margin-left: auto;
-    margin-right: 3rem;
-    align-self: flex-start;
-  }
-  .smaller-menu-icon {
-    display: none;
-  }
-
-  .mobile-logo {
-    display: none;
-  }
-  .main-heading {
-    display: block;
-  }
-  .header-content,
-  .heading-bg {
-    background: none;
-  }
-  .heading-bg {
-    display: flex;
-    flex-direction: column;
-  }
-  .heading-bg-lg {
-    background-image: url(https://www.tonogroup.com/wp-content/themes/tonoarchitects/images/home-new.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 3rem;
-  }
-  .main-heading {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 300;
-  }
-  .main-heading :last-child {
-    font-weight: 500;
-    font-size: 3rem;
-  }
-  .triangle-right {
-    width: 8rem;
-    height: 8rem;
-  }
-  .business-container{
-    flex-direction: row;
-  }
-  .relo,
-  .retro,
-  .tono,
-  .proto,
-  .deco {
-    height: 20rem;
-  }
-  .business-image {
-    width: 7rem;
-    height: 2.4rem;
-  }
-}
-/*** LARGE SIZE ***/
-@media only screen and (min-width: 770px) {
-  .main-heading :first-child {
-    font-size: 3rem;
-  }
-  .main-heading :last-child {
-    font-size: 4rem;
-  }
-  .heading-bg-lg {
-    padding-bottom: 5rem;
-  }
-  .info-container {
-    display: flex;
-    background-color: #f5f4f1;
-  }
-  .info-bg {
-    order: -1;
-    width: 50%;
-  }
-  .info-content {
-    width: 50%;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-}
-
-/** VERY LARGE SIZE ***/
-@media only screen and (min-width: 1200px) {
-  .info-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .info-bg {
-    height: auto;
-  }
-  .heading-bg-lg {
-    max-height: 100%;
-    height: 56vw;
-  }
-}
-
-@media only screen and (min-width: 1300px) {
-  .info-content {
-    padding: 3rem;
-  }
-  .relo,
-  .retro,
-  .tono,
-  .proto,
-  .deco {
-    height: 22rem;
-  }
+  height: 2rem;
 }
