@@ -9,6 +9,18 @@
 html,
 body {
   height: 100%;
+  background-color: #363535;
+}
+.heading-bg-lg,
+.info-container,
+.business-content {
+  background-color: #f7bf08;
+}
+.info-container,
+.business-content,
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
 }
 .nav-header {
   display: flex;
@@ -27,15 +39,16 @@ body {
   height: 12%;
 }
 .larger-logo {
-  width: 100%;
+  width: 5rem;
 }
 .main-heading {
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #ffffff;
+  color: #f7bf08;
   text-transform: uppercase;
+  text-shadow: 0px 0px 5px black;
 }
 .main-heading :first-child {
   font-size: 1rem;
@@ -95,21 +108,26 @@ body {
 .info-container {
   display: flex;
   flex-direction: column;
-  color: #717172;
+  color: black;
   padding: 1rem;
 }
 .italic {
   font-style: italic;
 }
 .info-p a {
-  color: #de5e1f;
+  color: #fbdf85;
   text-decoration: none;
+}
+.info-p a:hover {
+  color: #f7cd47;
 }
 .info-p {
   margin-bottom: 1.4rem;
 }
 .info-content h2 {
   margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 .info-bg {
   background-image: url(https://www.tonogroup.com/wp-content/uploads/2014/08/video3.jpg);
@@ -126,6 +144,7 @@ body {
 }
 .business-heading {
   text-align: center;
+  text-transform: uppercase;
 }
 .business-container {
   display: flex;
@@ -140,6 +159,9 @@ body {
   width: 90%;
   margin-top: 0.9rem;
   margin-bottom: 0.9rem;
+}
+.business-container a:hover {
+  box-shadow: inset 0rem 0rem 1rem white;
 }
 .business-image {
   width: 50%;
@@ -177,6 +199,12 @@ body {
 .green {
   background-color: #3862507a;
 }
+.green img,
+.grey img {
+  padding-left: 0;
+  padding-right: 1rem;
+  margin-left: auto;
+}
 .brown {
   background-color: #9f45167a;
 }
@@ -196,7 +224,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1.5rem;
+  padding: 1.5rem;
+  background-color: #393939;
 }
 .footer-nav {
   order: -1;
@@ -212,7 +241,74 @@ body {
 .footer-copyright {
   text-align: center;
   margin-top: 1rem;
+  color: #fff;
 }
 .logo {
-  height: 2rem;
+  height: 3rem;
+  width: 3rem;
+  padding: 0.1rem;
+  border: 0.1rem solid #717172;
+  border-radius: 50%;
+}
+
+/* Medium Styles */
+@media only screen and (min-width: 950px){
+  .nav-header .word-anchor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .word-anchor a {
+    text-decoration: none;
+    color: #f7bf08;
+    text-shadow: 0px 0px 5px black;
+  }
+  .header-content {
+    padding-top: 0.5rem;
+  }
+  .heading-bg-lg {
+    height: 100vh;
+  }
+  .larger-logo {
+    border: 0.5rem solid #f7bf08;
+    border-radius: 50%;
+  }
+  .nav-header li a:hover{
+    color: #b58b00;
+  }
+  .nav-header li a img:hover {
+    border-color: #b58b00;
+  }
+  .business-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .business-container a {
+    width: 45%;
+    margin: 1rem;
+  }
+  .info-container {
+    flex-direction: row;
+  }
+  .info-content {
+    width: 55%;
+    padding: 1rem;
+    margin-right: 2rem;
+    background-color: #d4a304;
+  }
+  .info-content h2 {
+    border-bottom: thin solid black;
+  }
+  .info-bg {
+    width: 45%;
+  }
+  .main-heading :first-child {
+    font-size: 3rem;
+    font-weight: 200;
+  }
+  .main-heading :last-child {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-top: 2rem;
 }
